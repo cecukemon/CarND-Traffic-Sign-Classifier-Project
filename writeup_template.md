@@ -22,9 +22,9 @@ The goals / steps of this project are the following:
 [image1]: ./german_traffic_signs/sign_1.jpg "Traffic Sign 1"
 [image2]: ./german_traffic_signs/sign_2.jpg "Traffic Sign 2"
 [image3]: ./german_traffic_signs/sign_3.jpg "Traffic Sign 3"
-[image4]: ./german_traffic_signs/sign_4.png "Traffic Sign 4"
-[image5]: ./german_traffic_signs/sign_5.png "Traffic Sign 5"
-[image6]: ./german_traffic_signs/sign_6.png "Traffic Sign 6"
+[image4]: ./german_traffic_signs/sign_4.jpg "Traffic Sign 4"
+[image5]: ./german_traffic_signs/sign_5.jpg "Traffic Sign 5"
+[image6]: ./german_traffic_signs/sign_6.jpg "Traffic Sign 6"
 
 ## Rubric Points
 ###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
