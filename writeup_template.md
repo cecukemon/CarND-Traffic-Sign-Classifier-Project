@@ -113,23 +113,65 @@ The model guessed one out of six signs correctly, giving an accuracy of 16%. Thi
 
 ####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction and identify where in your code softmax probabilities were outputted. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
-The code for making predictions on my final model is located in the 18th cell of the Ipython notebook.
+The code for making predictions on my final model is located in the 18th cell of the Ipython notebook. Here are the top five softmax probabilities for each image.
 
-First image:
+First image ("No Vehicles") - the model is very confident that this is a keep right sign. It's totally wrong.
 
 | Probability | Prediction |
 |:---------------------:|:---------------------------------------------:| 
+|97% | Keep right |
+| 2% | Priority road |
+| ~0% | Speed limit (30km/h) |
+| ~0% | Dangerous curve to the left |
+| ~0% | Speed limit (50km/h)|
 
+Second image ("No passing") 
 
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
-
-| Probability         	|     Prediction	        					| 
+| Probability | Prediction |
 |:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
+|99% | Traffic signals |
+| ~0% | General caution |
+| ~0% | Speed limit (70km/h) |
+| ~0% | Speed limit (30km/h) |
+| ~0% | Speed limit (80km/h)|
+
+Third image ("Speed limit (50km/h)") - the network is very confident that it's a speed limit. Considering I used an older version of the sign which contains extra text and a different font from modern signs, the results are okay. The network did not manage to recognize the exact speed limit, but it recognized the type of the sign.
+
+| Probability | Prediction |
+|:---------------------:|:---------------------------------------------:| 
+|100% | Speed limit (30km/h) |
+| ~0% | Speed limit (120km/h) |
+| ~0% | Speed limit (50km/h) |
+| ~0% | Speed limit (70km/h) |
+| ~0% | Speed limit (100km/h)|
 
 
-For the second image ... 
+Fourth image ("Stop") - the network failed to recognize this image. The image is taken from a low, tilted perspective so I'm not too surprised it had issues here.
+
+| Probability | Prediction |
+|:---------------------:|:---------------------------------------------:| 
+|100% | No passing for vehicles ... |
+| ~0% | Yield |
+| ~0% | Priority road |
+| ~0% | Stop |
+| ~0% | Keep right|
+
+Fifth image ("Cow crossing") - this sign isn't in the traffic sign database used for the training. I wanted to see what the network makes of it. It recognized it as some kind of warning sign, which is not too bad.
+
+| Probability | Prediction |
+|:---------------------:|:---------------------------------------------:| 
+|99% | No passing for vehicles ... |
+| ~0% | No passing  |
+| ~0% | Road work |
+| ~0% | Priority road |
+| ~0% | Right-of-way|
+
+Sixth image ("Priority road") . The network recognized this sign correctly.
+
+| Probability | Prediction |
+|:---------------------:|:---------------------------------------------:| 
+|99% | Priority road	 |
+| ~0% |No passing for vehicles ...  |
+| ~0% | Yield |
+| ~0% | Speed limit (20km/h) |
+| ~0% | Speed limit (30km/h)|
