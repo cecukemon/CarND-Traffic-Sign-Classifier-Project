@@ -94,7 +94,7 @@ I used an exponentially decaying training rate, starting at 0.001, using the Ten
 The code for calculating the accuracy of the model is located in the ninth cell of the Ipython notebook.
 
 Validation set accuracy 93%
-Test set accuracy on my own images 0%
+Test set accuracy on my own images 16%
 
 I used the architecture presented in the course which is used to classify the MNIST data set. I believed it would be relevant for the traffic sign application because the problem is similar - recognizing clear and well-defined shapes on 2D images. I found it difficult to get the model's accuracy over 93%, so I'm not sure if it's really a good fit for this prpoblem.
 
@@ -107,28 +107,28 @@ Here are five German traffic signs that I found on the web:
 ![alt text][image1] ![alt text][image2] ![alt text][image3] 
 ![alt text][image4] ![alt text][image5] ![alt text][image6]
 
-The first image might be difficult to classify because ...
+The third image might be difficult to classify because it's an older version of the traffic sign (newer ones don't have the km/h text). The fourth image might be difficult to classify because it's taken from a tilted perspective and the sign is distorted. The fifth image is a sign that isn't in the training set at all.
 
 ####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. Identify where in your code predictions were made. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
-The code for making predictions on my final model is located in the tenth cell of the Ipython notebook.
+The code for making predictions on my final model is located in the sixteenth cell of the Ipython notebook.
+Results:
 
-Here are the results of the prediction:
-
-| Image			        |     Prediction	        					| 
+| Image			        |     Best prediction	        					|  Second best prediction |
 |:---------------------:|:---------------------------------------------:| 
-| Stop Sign      		| Stop sign   									| 
-| U-turn     			| U-turn 										|
-| Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
+| No vehicles      		| Keep right   									|  Priority road |
+| No passing     			| Traffic signals 										| General caution |
+| 50 km/h					| Speed limit (30km/h)											|Speed limit (120km/h) |
+| Stop      		| No passing for vehicles ...					 				| Yield|
+| Cow			| No passing for vehicles ...      							| No passing|
+| Priority road | Priority road | No passing for vehicles ... |
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
+The model guessed one out of six signs correctly, giving an accuracy of 16%. This compares unfavorably with the training set. The image quality in the training set seems to be very different from the images I used here, they are much darker. Maybe this is a reason.
 
 ####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction and identify where in your code softmax probabilities were outputted. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
+The code for making predictions on my final model is located in the 18th cell of the Ipython notebook.
 
 For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
 
