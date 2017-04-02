@@ -104,8 +104,8 @@ I used the architecture presented in the course which is used to classify the MN
 
 Here are five German traffic signs that I found on the web:
 
-![alt text][image4] ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
+![alt text][image1] ![alt text][image2] ![alt text][image3] 
+![alt text][image4] ![alt text][image5] ![alt text][image6]
 
 The first image might be difficult to classify because ...
 
